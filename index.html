@@ -1,302 +1,320 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Akord Music Shop</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"
-    ></script>
 
-    <script src="./scripts/script.js"></script>
-    <script src="./scripts/orders.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Akord Music Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
 
-  <body>
-    
-    <div id="wrapper">
-    
-      <header>
-        <div class="container flex-container">
-          <h2>Akord Music Shop</h2>
-          <div class="icons">
-            <div id="shopping-card" title="Košarica">
+<body>
+
+  <div id="wrapper">
+
+    <header>
+      <div class="container flex-container">
+        <img src="./images/akord.png" width="150px" height="75px" alt="logo cover" />
+        <h2>Akord Music Shop</h2>
+        <div class="icons">
+          <div id="shopping-card" title="Košarica">
+            <a href="#kosarica">
               <i class="fas fa-shopping-cart"></i>
-              <div id="shopping-count">0</div>
+            </a>
+            <div id="shopping-count">0</div>
+          </div>
+        </div>
+        <nav>
+          <a class="nav-links" href="#pocetna">Početna</a>
+          <div class="dropdown">
+            <a class="nav-links" href="#aktualno">Aktualno</a>
+            <div class="dropdown-content">
+              <a href="#gitare">Gitare</a>
+              <a href="#klavijature">Klavijature</a>
+              <a href="#bubnjevi">Bubnjevi</a>
             </div>
           </div>
-          <nav>
-            <a class="nav-links" href="#pocetna">Početna</a>
-            <div class="dropdown">
-              <p class="nav-links">Aktualno</p>
-              <div class="dropdown-content">
-                <a href="#gitare">Gitare</a>
-                <a href="#klavijature">Klavijature</a>
-                <a href="#bubnjevi">Bubnjevi</a>
-              </div>
-            </div>
-            <a class="nav-links" href="#o-nama">O nama</a>
-            <a class="nav-links" href="#kontakt">Kontakt</a>
-          </nav>
-        </div>
-      </header>
+          <a class="nav-links" href="#o-nama">O nama</a>
+          <a class="nav-links" href="#kontakt">Kontakt</a>
+        </nav>
+      </div>
+    </header>
 
-      <section id="pocetna"></section>
-      <section id="cover">
-        <img src="./images/akord.png" alt="logo cover" />
-        <div id="bg-gradient"></div>
-        <div id="cover-text" class="container">
-          <h1>Dobrodošli na Akord Music Shop!</h1>
-          <small>Dostava na <b>Vašu adresu.</b></small>
-          <a class="action-btn" href="#gitare">Naruči odmah</a>
-        </div>
-      </section>
+    <!--            POČETNA              -->
 
-      <section id="gitare" class="section-box">
-          
-        <h2 class="section-title">Aktualno kod nas:</h2>
-        <br>
-        <h3 class="section-title">Gitare:</h3>
-        <span class="title-underline"></span>
-        <div id="part-holder" class="container">
-            <article class="part-card">
-                <img
-                  class="part-image"
-                  src="./images/Gitare/squier-bundle.png"
-                  alt="Squier Bundle"
-                />
-                <h3 class="part-name">Fender Squier Beginner's Bundle</h3>
-                <p class="part-description">
-                  Vestibulum tincidunt a erat ac pretium. Sed efficitur aliquet
-                  consequat. Pellentesque tellus massa, maximus nec mi ut, laoreet
-                  feugiat libero. In feugiat rutrum elementum. Fusce ornare ex a
-                  massa tempor posuere.
-                </p>
-                <span class="part-price">Već od: <em>1150,00kn</em></span>
-                <button class="part-button">Naruči</button>
-              </article>
-          <article class="part-card">
-            <img
-              class="part-image"
-              src="./images/Gitare/cort-cr250.png"
-              alt="Cort CR250"
-            />
-            <h3 class="part-name">Cort CR250</h3>
-            <p class="part-description">
-              Vestibulum tincidunt a erat ac pretium. Sed efficitur aliquet
-              consequat. Pellentesque tellus massa, maximus nec mi ut, laoreet
-              feugiat libero. In feugiat rutrum elementum. Fusce ornare ex a
-              massa tempor posuere.
-            </p>
-            <span class="part-price">Već od: <em>2999,99kn</em></span>
-            <button class="part-button">Naruči</button>
-          </article>
-          <article class="part-card">
-            <img
-              class="part-image"
-              src="./images/Gitare/bmg-special.png"
-              alt="Red Special"
-            />
-            <h3 class="part-name">Brian May's Red Special</h3>
-            <p class="part-description">
-              Vestibulum tincidunt a erat ac pretium. Sed efficitur aliquet
-              consequat. Pellentesque tellus massa, maximus nec mi ut, laoreet
-              feugiat libero. In feugiat rutrum elementum. Fusce ornare ex a
-              massa tempor posuere.
-            </p>
-            <span class="part-price">Već od: <em>6990,00kn</em></span>
-            <button class="part-button">Naruči</button>
-          </article>
-          <article class="part-card">
-            <img
-              class="part-image"
-              src="./images/Gitare/gibson-sg.png"
-              alt="Gibson SG"
-            />
-            <h3 class="part-name">Gibson SG</h3>
-            <p class="part-description">
-              Vestibulum tincidunt a erat ac pretium. Sed efficitur aliquet
-              consequat. Pellentesque tellus massa, maximus nec mi ut, laoreet
-              feugiat libero. In feugiat rutrum elementum. Fusce ornare ex a
-              massa tempor posuere.
-            </p>
-            <span class="part-price">Već od: <em>10960,00kn</em></span>
-            <button class="part-button">Naruči</button>
-          </article>
-          </section>
+    <section id="pocetna"></section>
+    <section id="cover">
+      <div id="bg-gradient"></div>
+      <div id="cover-text" class="container">
+        <h1>Dobrodošli na Akord Music Shop!</h1>
+        <small>Dostava na <b>Vašu adresu.</b></small>
+        <a class="action-btn" href="#gitare">Naruči odmah</a>
+      </div>
+    </section>
 
-          <section id="klavijature" class="section-box">
-            <br>
-            <h3 class="section-title">Klavijature:</h3>
-            <span class="title-underline"></span>
-            <div id="part-holder" class="container">
-                <article class="part-card">
-                    <img
-                      class="part-image"
-                      src="./images/Klavijature/yamaha-np32b.png"
-                      alt="Squier Bundle"
-                    />
-                    <h3 class="part-name">Yamaha NP32-B</h3>
-                    <p class="part-description">
-                      Vestibulum tincidunt a erat ac pretium. Sed efficitur aliquet
-                      consequat. Pellentesque tellus massa, maximus nec mi ut, laoreet
-                      feugiat libero. In feugiat rutrum elementum. Fusce ornare ex a
-                      massa tempor posuere.
-                    </p>
-                    <span class="part-price">Već od: <em>2500,00kn</em></span>
-                    <button class="part-button">Naruči</button>
-                  </article>
-              <article class="part-card">
-                <img
-                  class="part-image"
-                  src="./images/Klavijature/roland-fp30.png"
-                  alt="Cort CR250"
-                />
-                <h3 class="part-name">Roland FP30</h3>
-                <p class="part-description">
-                  Vestibulum tincidunt a erat ac pretium. Sed efficitur aliquet
-                  consequat. Pellentesque tellus massa, maximus nec mi ut, laoreet
-                  feugiat libero. In feugiat rutrum elementum. Fusce ornare ex a
-                  massa tempor posuere.
-                </p>
-                <span class="part-price">Već od: <em>4760,00</em></span>
-                <button class="part-button">Naruči</button>
-              </article>
-              <article class="part-card">
-                <img
-                  class="part-image"
-                  src="./images/Klavijature/yamaha-p125.png"
-                  alt="Red Special"
-                />
-                <h3 class="part-name">Yamaha P125</h3>
-                <p class="part-description">
-                  Vestibulum tincidunt a erat ac pretium. Sed efficitur aliquet
-                  consequat. Pellentesque tellus massa, maximus nec mi ut, laoreet
-                  feugiat libero. In feugiat rutrum elementum. Fusce ornare ex a
-                  massa tempor posuere.
-                </p>
-                <span class="part-price">Već od: <em>6740,00kn</em></span>
-                <button class="part-button">Naruči</button>
-              </article>
-              <article class="part-card">
-                <img
-                  class="part-image"
-                  src="./images/Klavijature/korg-sv288s.png"
-                  alt="Gibson SG"
-                />
-                <h3 class="part-name">Korg SV2-88s</h3>
-                <p class="part-description">
-                  Vestibulum tincidunt a erat ac pretium. Sed efficitur aliquet
-                  consequat. Pellentesque tellus massa, maximus nec mi ut, laoreet
-                  feugiat libero. In feugiat rutrum elementum. Fusce ornare ex a
-                  massa tempor posuere.
-                </p>
-                <span class="part-price">Već od: <em>15620,00kn</em></span>
-                <button class="part-button">Naruči</button>
-              </article>
-              </section>
+    <!--            GITARE              -->
+
+    <section id="gitare" class="section-box">
+      <br>
+      <h3 class="section-title">Gitare:</h3>
+      <span class="title-underline"></span>
+      <div id="part-holder" class="container">
+        <article class="part-card">
+          <img class="part-image" src="./images/Gitare/squier-bundle.png" alt="Squier Bundle" />
+          <h3 class="part-name">Fender Squier Beginner's Bundle</h3>
+          <p class="part-description">
+            Vestibulum tincidunt a erat ac pretium. Sed efficitur aliquet
+            consequat. Pellentesque tellus massa, maximus nec mi ut, laoreet
+            feugiat libero. In feugiat rutrum elementum. Fusce ornare ex a
+            massa tempor posuere.
+          </p>
+          <span class="part-price">Već od: <em>1150,00 kn</em></span>
+          <button class="part-button">Naruči</button>
+        </article>
+        <article class="part-card">
+          <img class="part-image" src="./images/Gitare/cort-cr250.png" alt="Cort CR250" />
+          <h3 class="part-name">Cort CR250</h3>
+          <p class="part-description">
+            Vestibulum tincidunt a erat ac pretium. Sed efficitur aliquet
+            consequat. Pellentesque tellus massa, maximus nec mi ut, laoreet
+            feugiat libero. In feugiat rutrum elementum. Fusce ornare ex a
+            massa tempor posuere.
+          </p>
+          <span class="part-price">Već od: <em>2999,99 kn</em></span>
+          <button class="part-button">Naruči</button>
+        </article>
+        <article class="part-card">
+          <img class="part-image" src="./images/Gitare/bmg-special.png" alt="Red Special" />
+          <h3 class="part-name">Brian May's Red Special</h3>
+          <p class="part-description">
+            Vestibulum tincidunt a erat ac pretium. Sed efficitur aliquet
+            consequat. Pellentesque tellus massa, maximus nec mi ut, laoreet
+            feugiat libero. In feugiat rutrum elementum. Fusce ornare ex a
+            massa tempor posuere.
+          </p>
+          <span class="part-price">Već od: <em>6990,00 kn</em></span>
+          <button class="part-button">Naruči</button>
+        </article>
+        <article class="part-card">
+          <img class="part-image" src="./images/Gitare/gibson-sg.png" alt="Gibson SG" />
+          <h3 class="part-name">Gibson SG Standard</h3>
+          <p class="part-description">
+            Vestibulum tincidunt a erat ac pretium. Sed efficitur aliquet
+            consequat. Pellentesque tellus massa, maximus nec mi ut, laoreet
+            feugiat libero. In feugiat rutrum elementum. Fusce ornare ex a
+            massa tempor posuere.
+          </p>
+          <span class="part-price">Već od: <em>10960,00 kn</em></span>
+          <button class="part-button">Naruči</button>
+        </article>
+    </section>
+
+    <!--            KLAVIJATURE              -->
+
+    <section id="klavijature" class="section-box">
+      <br>
+      <h3 class="section-title">Klavijature:</h3>
+      <span class="title-underline"></span>
+      <div id="part-holder" class="container">
+        <article class="part-card">
+          <img class="part-image" src="./images/Klavijature/yamaha-np32b.png" alt="Squier Bundle" />
+          <h3 class="part-name">Yamaha NP32-B</h3>
+          <p class="part-description">
+            Vestibulum tincidunt a erat ac pretium. Sed efficitur aliquet
+            consequat. Pellentesque tellus massa, maximus nec mi ut, laoreet
+            feugiat libero. In feugiat rutrum elementum. Fusce ornare ex a
+            massa tempor posuere.
+          </p>
+          <span class="part-price">Već od: <em>2500,00 kn</em></span>
+          <button class="part-button">Naruči</button>
+        </article>
+        <article class="part-card">
+          <img class="part-image" src="./images/Klavijature/roland-fp30.png" alt="Cort CR250" />
+          <h3 class="part-name">Roland FP30</h3>
+          <p class="part-description">
+            Vestibulum tincidunt a erat ac pretium. Sed efficitur aliquet
+            consequat. Pellentesque tellus massa, maximus nec mi ut, laoreet
+            feugiat libero. In feugiat rutrum elementum. Fusce ornare ex a
+            massa tempor posuere.
+          </p>
+          <span class="part-price">Već od: <em>4760,00 kn</em></span>
+          <button class="part-button">Naruči</button>
+        </article>
+        <article class="part-card">
+          <img class="part-image" src="./images/Klavijature/yamaha-p125.png" alt="Red Special" />
+          <h3 class="part-name">Yamaha P125</h3>
+          <p class="part-description">
+            Vestibulum tincidunt a erat ac pretium. Sed efficitur aliquet
+            consequat. Pellentesque tellus massa, maximus nec mi ut, laoreet
+            feugiat libero. In feugiat rutrum elementum. Fusce ornare ex a
+            massa tempor posuere.
+          </p>
+          <span class="part-price">Već od: <em>6740,00 kn</em></span>
+          <button class="part-button">Naruči</button>
+        </article>
+        <article class="part-card">
+          <img class="part-image" src="./images/Klavijature/korg-sv288s.png" alt="Gibson SG" />
+          <h3 class="part-name">Korg SV2-88s</h3>
+          <p class="part-description">
+            Vestibulum tincidunt a erat ac pretium. Sed efficitur aliquet
+            consequat. Pellentesque tellus massa, maximus nec mi ut, laoreet
+            feugiat libero. In feugiat rutrum elementum. Fusce ornare ex a
+            massa tempor posuere.
+          </p>
+          <span class="part-price">Već od: <em>15620,00 kn</em></span>
+          <button class="part-button">Naruči</button>
+        </article>
+    </section>
+
+    <!--            BUBNJEVI              -->
+
+    <section id="bubnjevi" class="section-box">
+      <br>
+      <h3 class="section-title">Bubnjevi:</h3>
+      <span class="title-underline"></span>
+      <div id="part-holder" class="container">
+        <article class="part-card">
+          <img class="part-image" src="./images/Bubnjevi/pearl-rs505c-c31.png" alt="Squier Bundle" />
+          <h3 class="part-name">Pearl RS505C-C31</h3>
+          <p class="part-description">
+            Vestibulum tincidunt a erat ac pretium. Sed efficitur aliquet
+            consequat. Pellentesque tellus massa, maximus nec mi ut, laoreet
+            feugiat libero. In feugiat rutrum elementum. Fusce ornare ex a
+            massa tempor posuere.
+          </p>
+          <span class="part-price">Već od: <em>4699,00 kn</em></span>
+          <button class="part-button">Naruči</button>
+        </article>
+        <article class="part-card">
+          <img class="part-image" src="./images/Bubnjevi/yamaha-sbp2f5-cr.png" alt="Cort CR250" />
+          <h3 class="part-name">Yamaha SBP2F5-CR</h3>
+          <p class="part-description">
+            Vestibulum tincidunt a erat ac pretium. Sed efficitur aliquet
+            consequat. Pellentesque tellus massa, maximus nec mi ut, laoreet
+            feugiat libero. In feugiat rutrum elementum. Fusce ornare ex a
+            massa tempor posuere.
+          </p>
+          <span class="part-price">Već od: <em>6269,00 kn</em></span>
+          <button class="part-button">Naruči</button>
+        </article>
+        <article class="part-card">
+          <img class="part-image" src="./images/Bubnjevi/alesis-crimson-ii.png" alt="Red Special" />
+          <h3 class="part-name">Alesis Crimson II</h3>
+          <p class="part-description">
+            Vestibulum tincidunt a erat ac pretium. Sed efficitur aliquet
+            consequat. Pellentesque tellus massa, maximus nec mi ut, laoreet
+            feugiat libero. In feugiat rutrum elementum. Fusce ornare ex a
+            massa tempor posuere.
+          </p>
+          <span class="part-price">Već od: <em>7599,00 kn</em></span>
+          <button class="part-button">Naruči</button>
+        </article>
+        <article class="part-card">
+          <img class="part-image" src="./images/Bubnjevi/roland-td17kvx-v.png" alt="Gibson SG" />
+          <h3 class="part-name">Roland TD-17KVX</h3>
+          <p class="part-description">
+            Vestibulum tincidunt a erat ac pretium. Sed efficitur aliquet
+            consequat. Pellentesque tellus massa, maximus nec mi ut, laoreet
+            feugiat libero. In feugiat rutrum elementum. Fusce ornare ex a
+            massa tempor posuere.
+          </p>
+          <span class="part-price">Već od: <em>15700,00 kn</em></span>
+          <button class="part-button">Naruči</button>
+        </article>
+    </section>
+  </div>
+
+  <hr>
+
+  <section id="o-nama" class="section-box">
+    <h3 class="section-title">O nama</h3>
+    <span class="title-underline"></span>
+    <div class="container">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nunc hendrerit dolor ac sem gravida suscipit.
+        Aenean orci ipsum, dignissim in urna id, suscipit efficitur justo.
+        Nunc accumsan scelerisque ex, a venenatis turpis ornare nec.
+        Suspendisse potenti.
+        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        Praesent porta arcu lectus, at rhoncus diam rhoncus id. Cras ut augue euismod, consequat tellus eget, efficitur
+        nisl.
+        Sed in massa id arcu aliquet placerat. Morbi vulputate lacus quis egestas consectetur.
+        Morbi auctor, nisl et maximus finibus, mauris urna pretium ex, in elementum nisi turpis in magna.
+        Vivamus ac hendrerit orci.
+        Nulla porta eros eget erat aliquet sollicitudin.
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas et ex vitae
+        ante facilisis luctus faucibus ac justo.
+        Cras bibendum eu nisi non vehicula. Suspendisse a pulvinar mauris. Donec gravida ante et tempus dapibus.
+      </p>
     </div>
+  </section>
 
-    <hr>
+  <hr>
 
-      <section id="o-nama" class="section-box">
-        <h3 class="section-title">O nama</h3>
-        <span class="title-underline"></span>
-        <div class="container">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Nunc hendrerit dolor ac sem gravida suscipit.
-            Aenean orci ipsum, dignissim in urna id, suscipit efficitur justo.
-            Nunc accumsan scelerisque ex, a venenatis turpis ornare nec.
-            Suspendisse potenti.
-            Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            Praesent porta arcu lectus, at rhoncus diam rhoncus id. Cras ut augue euismod, consequat tellus eget, efficitur nisl.
-            Sed in massa id arcu aliquet placerat. Morbi vulputate lacus quis egestas consectetur.
-            Morbi auctor, nisl et maximus finibus, mauris urna pretium ex, in elementum nisi turpis in magna.
-            Vivamus ac hendrerit orci.
-            Nulla porta eros eget erat aliquet sollicitudin.
-            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas et ex vitae ante facilisis luctus faucibus ac justo.
-            Cras bibendum eu nisi non vehicula. Suspendisse a pulvinar mauris. Donec gravida ante et tempus dapibus.
-          </p>
-        </div>
-      </section>
+  <section id="kontakt" class="section-box">
+    <h2 class="section-title">Kontaktirajte nas</h2>
+    <span class="title-underline"></span>
+    <div class="container">
+      <form>
+        <label for="mail">Email</label>
+        <input type="email" name="email" id="mail" placeholder="Email" required />
+        <label for="naslov">Naslov</label>
+        <input type="text" name="subject" id="naslov" placeholder="Naslov poruke" required />
+        <label for="poruka">Poruka</label>
+        <textarea id="poruka" name="message" cols="8" rows="4" placeholder="Vaša poruka..." required></textarea>
+        <button type="submit" class="part-button">Pošalji</button>
+      </form>
+    </div>
+  </section>
 
-    <hr>
+  <hr>
 
-      <section id="kontakt" class="section-box">
-        <h2 class="section-title">Kontaktirajte nas</h2>
-        <span class="title-underline"></span>
-        <div class="container">
-          <form>
-            <label for="mail">Email</label>
-            <input
-              type="email"
-              name="email"
-              id="mail"
-              placeholder="Email"
-              required
-            />
-            <label for="naslov">Naslov</label>
-            <input
-              type="text"
-              name="subject"
-              id="naslov"
-              placeholder="Naslov poruke"
-              required
-            />
-            <label for="poruka">Poruka</label>
-            <textarea
-              id="poruka"
-              name="message"
-              cols="8"
-              rows="4"
-              placeholder="Vaša poruka..."
-              required
-            ></textarea>
-            <button type="submit" class="part-button">Pošalji</button>
-          </form>
-        </div>
-      </section>
-
-      <div class="icon-bar">
-          <a href="https://www.facebook.com" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a> 
-          <a href="https://www.twitter.com" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a> 
-          <a href="https://www.linkedin.com" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
-          <a href="https://www.youtube.com" class="youtube" target="_blank"><i class="fa fa-youtube"></i></a> 
-        </div>
-
-      <footer>
-          <div id="footer-box" class="container">
-          
-          <p id="copyright">
-            &copy;<em> 2022, Sva prava pridržana</em> <br />
-            <strong>Duje Marušić & Bruno Stipanović</strong>
-          </p>
-        </div>
-      </footer>
-      
-      <div id="shopping-side-menu">
-        <div id="side-menu-items"></div>
-        <div id="side-menu-action">
+  <section id="kosarica">
+    <h2 class="section-title">Košarica</h2>
+    <span class="title-underline"></span>
+    <div class="container">
+      <div id="shopping-menu">
+        <div id="menu-items"></div>
+        <div id="menu-action">
           <div class="total-price">
+            <div class="amount-box">
+            </div>
             <span>Ukupna cijena:</span> <em>0,00</em>
           </div>
-          <button>Naruči</button>
+          <button class="part-button">Naruči</button>
         </div>
         <div id="info"></div>
       </div>
     </div>
-  </body>
+  </section>
+
+  <div class="icon-bar">
+    <a href="https://www.facebook.com" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+    <a href="https://www.twitter.com" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.linkedin.com" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+    <a href="https://www.youtube.com" class="youtube" target="_blank"><i class="fa fa-youtube"></i></a>
+  </div>
+
+  <footer>
+    <div id="footer-box" class="container">
+
+      <p id="copyright">
+        &copy;<em> 2022, Sva prava pridržana</em> <br />
+        <strong>Duje Marušić & Bruno Stipanović</strong>
+      </p>
+    </div>
+  </footer>
+
+  <script src="./scripts/script.js"></script>
+
+</body>
+
 </html>
