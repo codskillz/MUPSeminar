@@ -1,18 +1,5 @@
 function shopIconCount() {
-  const countCircle = document.getElementById('shopping-count');
-  let totalCount = 0;
-  // Prvo dohvati sve 'shopping-item'-e iz košarice
-  const itemsInShop = document.querySelectorAll(
-    '#shopping-menu .shopping-item'
-  );
-  for (let i = 0; i < itemsInShop.length; i++) {
-    const itemInShop = itemsInShop[i];
-    // Za svakog dohvati količinu
-    const itemCount = itemInShop.querySelector('amount-box p').textContent;
-    totalCount += parseInt(itemCount);
-  }
-  // Zapiši dobiveni 'count' u žuti krug pokraj ikone košarice
-  countCircle.textContent = totalCount;
+  
 }
 
 const buttonList = document.querySelectorAll('article button.part-button');

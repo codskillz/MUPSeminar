@@ -83,8 +83,7 @@ nav p {
   color: #ffff3c;
 }
 
-#shopping-card,
-#history {
+#shopping-card {
   position: relative;
   display: block;
   color: #ffff3c;
@@ -121,14 +120,6 @@ nav p {
   display: flex;
   align-items: center;
   border-radius: 0 0 85% 85% / 30%;
-}
-
-#cover img {
-  width: 50%;
-
-  margin: 0 auto;
-  max-width: 1140px;
-  display: block;
 }
 
 #cover #cover-text {
@@ -173,7 +164,6 @@ nav p {
 #cover-text a.action-btn:hover {
   background-color: #78bb1b;
   transition-duration: 0.3s;
-
 }
 
 #bg-gradient {
@@ -318,11 +308,6 @@ textarea {
   color: white;
 }
 
-.google {
-  background: #dd4b39;
-  color: white;
-}
-
 .linkedin {
   background: #007bb5;
   color: white;
@@ -455,79 +440,6 @@ footer h4 {
   align-items: center;
 }
 
-.shopping-item .amount-box button:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-/* Side Menu Action */
-#side-menu-action {
-  display: flex;
-  flex-direction: column;
-  padding: 1em 0;
-}
-
-#side-menu-action .total-price {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5em;
-  font-size: 1.2em;
-}
-
-#side-menu-action .total-price>em {
-  font-weight: 600;
-}
-
-#side-menu-action .total-price>em::after {
-  content: 'kn';
-  padding-left: 0.3em;
-  font-weight: 500;
-}
-
-#side-menu-action button {
-  display: block;
-  margin: 12px auto;
-  padding: 8px 0px;
-  font-family: 'Mali', cursive;
-  font-size: 16px;
-  border: 2px solid transparent;
-  background-color: #78bb1b;
-  color: white;
-  outline: none;
-  border-radius: 22px;
-  width: 150px;
-  cursor: pointer;
-}
-
-#info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2em;
-  margin: 1.5em 0.5em;
-  padding: 0.5em;
-  color: white;
-  border-radius: 4px;
-  min-height: 4em;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease-out;
-}
-
-#info.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-#info.success {
-  background-color: #36c166;
-}
-
-#info.error {
-  background-color: #ce2e30;
-}
-
 /* Dropdown menu */
 
 .dropbtn {
@@ -570,25 +482,4 @@ footer h4 {
 
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
-}
-
-@media only screen and (min-width: 768px) {
-  nav {
-    margin-left: auto;
-    margin-right: 1em;
-  }
-
-  #parts-holder {
-    margin: 0 2.5em;
-    max-width: 100%;
-  }
-
-  #shopping-side-menu {
-    top: 76px;
-    border-left: 1px solid #ccc;
-  }
-
-  #shopping-side-menu.active {
-    width: 30vw;
-  }
 }
