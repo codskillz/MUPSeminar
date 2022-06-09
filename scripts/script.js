@@ -43,7 +43,7 @@ function createNewShopItem(partData) {
   shopItem.appendChild(shopItemHeading);
   //Cijena Itema
   const shopItemPrice = document.createElement('p');
-  shopItemPrice.textContent = partData.price;
+  shopItemPrice.textContent = partData.price + 'kn';
   shopItem.appendChild(shopItemPrice);
 
   addNewItemToShopList(shopItem);
