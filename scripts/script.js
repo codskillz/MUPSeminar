@@ -1,59 +1,52 @@
-function shopIconCount() {
-  
+let cartState = []
+window.addEventListener("load", onInit);
+
+function onInit() {
+    db.forEach(entity => {
+        $('#items').append(`
+          <div id="${entity.name.toLowerCase()}" class="section-box">
+            <h3 class="section-title">${entity.name}:</h3>
+            <span class="title-underline"></span>
+            <div id="part-holder" class="container"></div>
+          </div>
+        `)
+        entity.items.forEach(item => {
+          $(`#${entity.name.toLowerCase()} > #part-holder`).append(`
+              <article class="part-card">
+                <img class="part-image" src="${item.image}" alt="${item.name}" />
+                <h3 class="part-name">${item.name}</h3>
+                <p class="part-description">${item.description}</p>
+                <span class="part-price">Već od: <em>${item.price} kn</em></span>
+                <button id="${entity.id}-${item.id}" class="part-button">Naruči</button>
+              </article>
+          `);
+        })
+    });
+
+    $(document).ready(function(){
+      $('.part-button').click(function(e){
+        addItemToCart(this.id.split('-')[0], this.id.split('-')[1]);
+      });
+    });
 }
 
-const buttonList = document.querySelectorAll('article button.part-button');
+$(document).ready(function(){
+  $('#shopping-cart').click(function(e){
+    $('#cart-modal').toggle();
+  });
+});
 
-for(let i = 0; i < buttonList.length; i++)
-{
-    const button = buttonList[i];
-    button.addEventListener('click', handleButtonClick);
-}
+function addItemToCart(entityId, itemId) {
+  const selectedItem = db.find(entity => entity.id === Number(entityId)).items.find(item => item.id === Number(itemId));
+  cartState.push(selectedItem);
 
-function handleButtonClick(e) {
-    const clickedButton = e.currentTarget;
+  $('#menu-items').append(`
+    <div class="shopping-item">
+      <h3>${selectedItem.name}</h3>
+      <p>${selectedItem.price} kn</p>
+    </div>
+  `);
 
-    const partCard = clickedButton.parentElement;
-    const partName = partCard.querySelector('h3').textContent;
-    const partPrice = partCard.querySelector('span > em').textContent;
-    
-    const instrumentPrice = partPrice.split(' ')[0];
-
-  //Objekt za createNewShopItem()
-  const partData = {
-    name: partName,
-    price: instrumentPrice
-  };
-
-  console.log(partData);
-
-  createNewShopItem(partData);
-
-  shopIconCount();
-  calculateTotalPrice();
-}
-
-function createNewShopItem(partData) {
-  const shopItem = document.createElement('div');
-  shopItem.classList.add('shopping-item');
-  shopItem.setAttribute('id', partData.name.toLowerCase());
-  //Heading Itema
-  const shopItemHeading = document.createElement('h3');
-  shopItemHeading.textContent = partData.name;
-  shopItem.appendChild(shopItemHeading);
-  //Cijena Itema
-  const shopItemPrice = document.createElement('p');
-  shopItemPrice.textContent = partData.price + 'kn';
-  shopItem.appendChild(shopItemPrice);
-
-  addNewItemToShopList(shopItem);
-}
-
-function addNewItemToShopList(newItem) {
-  const shopSideMenu = document.getElementById('menu-items');
-  shopSideMenu.appendChild(newItem);
-}
-
-function calculateTotalPrice() {
-  
+  $('#shopping-count').text(cartState.length);
+  $('#cart-amount').text(`${cartState.reduce((previousValue, currentValue) => previousValue + currentValue.price, 0)} kn`);
 }
