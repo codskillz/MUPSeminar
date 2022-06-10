@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <script src="./scripts/script.js"></script>
+  <script src="./scripts/db.js"></script>
 </head>
 
 <body>
@@ -42,7 +45,7 @@
                     </div>
                     <span>Ukupna cijena:</span> <em id="cart-amount">0,00</em>
                   </div>
-                  <button class="part-button">Naruči</button>
+                  <button id="order-button" class="part-button">Naruči</button>
                 </div>
               </div>
             </div>
@@ -140,9 +143,29 @@
     </div>
   </footer>
 
-  <script src="./scripts/script.js"></script>
-  <script src="./scripts/db.js"></script>
+  <div id="order-modal">
+    <form id="order-form">
+      <label for="fullName">Ime i prezime</label>
+      <input type="fullName" name="fullName" id="fullName" required />
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required />
+      <label for="address">Adresa</label>
+      <input type="text" name="subject" id="address" required />
+      <label for="addition">Napomena</label>
+      <textarea id="addition" name="message" cols="8" rows="4" required></textarea>
+      <div class="flex-container">
+        <button id="close-order" class="part-button close-button">Odustani</button>
+        <button id="submit-order" type="submit" class="part-button">Pošalji</button>
+      </div>
+    </form>
+  </div>
 
+  <div id="success-modal">
+    <h3 class="section-title">Uspjeh</h2>
+    <span class="title-underline"></span>
+    <p class="text-center">Zahvaljujemo na kupnji, vaša narudžba je u obradi!</p>
+    <button id="close-success" class="part-button">Zatvori</button>
+  </div>
 </body>
 
 </html>

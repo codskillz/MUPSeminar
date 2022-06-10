@@ -24,7 +24,26 @@ function onInit() {
     });
 
     $(document).ready(function(){
-      $('.part-button').click(function(e){
+      $('.part-button').click(function(e) {
+        if (this.id === 'order-button' && cartState.length) {
+          $('#cart-modal').toggle();
+          return $('#order-modal').toggle();
+        };
+
+        if (this.id === 'close-order') {
+          return $('#order-modal').toggle();
+        }
+
+        if (this.id === 'submit-order' && $('#order-form').valid()) {
+          e.preventDefault();
+          $('#success-modal').toggle();
+          return $('#order-modal').toggle();
+        }
+
+        if (this.id === 'close-success') {
+          return $('#success-modal').toggle();
+        }
+
         addItemToCart(this.id.split('-')[0], this.id.split('-')[1]);
       });
     });
@@ -48,5 +67,5 @@ function addItemToCart(entityId, itemId) {
   `);
 
   $('#shopping-count').text(cartState.length);
-  $('#cart-amount').text(`${cartState.reduce((previousValue, currentValue) => previousValue + currentValue.price, 0)} kn`);
+  $('#cart-amount').text(`${Math.round(cartState.reduce((previousValue, currentValue) => previousValue + currentValue.price, 0) * 100) / 100} kn`);
 }
